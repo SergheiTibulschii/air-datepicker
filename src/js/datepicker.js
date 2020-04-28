@@ -824,10 +824,7 @@
             var onHide = this.opts.onHide;
 
             this.$datepicker
-                .removeClass('active')
-                .css({
-                    left: '-100000px'
-                });
+                .removeClass('active');
 
             this.focused = '';
             this.keys = [];
