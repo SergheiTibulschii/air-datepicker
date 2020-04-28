@@ -156,7 +156,7 @@
             if (this.elIsInput) {
                 if (!this.opts.inline) {
                     // Set extra classes for proper transitions
-                    this._setPositionClasses(this.opts.position);
+                    // this._setPositionClasses(this.opts.position);
                     this._bindEvents()
                 }
                 if (this.opts.keyboardNav && !this.opts.onlyTimepicker) {
@@ -272,7 +272,7 @@
 
             if(this.el.nodeName == 'INPUT') {
                 if (!this.opts.inline) {
-                    $appendTarget = $datepickersContainer;
+                    $appendTarget = this.opts.container || $datepickersContainer;
                 } else {
                     $appendTarget = $inline.insertAfter(this.$el)
                 }
@@ -621,12 +621,12 @@
             if (!this.opts.onlyTimepicker) this.nav._render();
             this.views[this.currentView]._render();
 
-            if (this.elIsInput && !this.opts.inline) {
-                this._setPositionClasses(this.opts.position);
-                if (this.visible) {
-                    this.setPosition(this.opts.position)
-                }
-            }
+            // if (this.elIsInput && !this.opts.inline) {
+            //     this._setPositionClasses(this.opts.position);
+            //     if (this.visible) {
+            //         this.setPosition(this.opts.position)
+            //     }
+            // }
 
             if (this.opts.classes) {
                 this.$datepicker.addClass(this.opts.classes)
@@ -811,7 +811,7 @@
         show: function () {
             var onShow = this.opts.onShow;
 
-            this.setPosition(this.opts.position);
+            // this.setPosition(this.opts.position);
             this.$datepicker.addClass('active');
             this.visible = true;
 
@@ -1147,7 +1147,7 @@
 
         _onResize: function () {
             if (this.visible) {
-                this.setPosition();
+                // this.setPosition();
             }
         },
 
@@ -1316,9 +1316,9 @@
             if (this.inited && !this.silent) {
                 this.views[this.view]._render();
                 this.nav._render();
-                if (this.visible && this.elIsInput) {
-                    this.setPosition();
-                }
+                // if (this.visible && this.elIsInput) {
+                //     this.setPosition();
+                // }
             }
             return val;
         },
@@ -1351,7 +1351,7 @@
                 if (this.opts.onChangeView) {
                     this.opts.onChangeView(val)
                 }
-                if (this.elIsInput && this.visible) this.setPosition();
+                // if (this.elIsInput && this.visible) this.setPosition();
             }
 
             return val
