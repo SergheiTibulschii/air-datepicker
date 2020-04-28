@@ -296,7 +296,7 @@
                 return;
             }
 
-            dp._handleAlreadySelectedDates.bind(dp, alreadySelected, selectedDate)();
+           // dp._handleAlreadySelectedDates.bind(dp, alreadySelected, selectedDate)();
 
         },
 
