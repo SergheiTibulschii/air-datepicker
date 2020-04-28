@@ -25,6 +25,7 @@
   color: map_get($datepickerTextColor, common);
   width: $datepickerWidth;
   position: absolute;
+  left: -10000px;
   opacity: 0;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
   z-index: $datepickerZIndex;
