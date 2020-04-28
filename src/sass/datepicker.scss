@@ -47,8 +47,6 @@
   &.active {
     opacity: 1;
     left: 0;
-    top: 0;
-    transform: translateY(-50%);
     transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s 0s;
   }
 }
